@@ -1,14 +1,12 @@
-import { useState } from 'react'
-
 import './App.css'
+import CalcForm from "./components/CalcForm"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-     
-    </>
+    <div className='w-screen'>
+     <CalcForm/>
+    </div>
   )
 }
 
