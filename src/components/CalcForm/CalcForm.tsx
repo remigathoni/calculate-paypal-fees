@@ -53,7 +53,7 @@ function CalcForm() {
   return (
     
 
-<div className="mt-6 max-w-sm mx-auto bg-gray-700 rounded p-6">
+<div className="mt-6 mx-auto  max-w-xs md:max-w-screen-md bg-zinc-200  dark:bg-gray-900 rounded p-6">
   <h1 className="text-sm  mb-6">If you are sent:</h1>
   <div className="relative z-0 w-full mb-8 group">
         <input type="text" name="floating_company" 
@@ -81,14 +81,14 @@ function CalcForm() {
   <div>
     <label className="relative inline-flex items-center cursor-pointer mb-8">
         <input type="checkbox" ref={checkbox} className="sr-only peer" />
-        <div className="w-9 h-5 bg-gray-200 border-2 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+        <div className="w-11 h-6 md:w-9 md:h-5 bg-zinc-300  border-2 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
         <span className="ml-3 text-sm xs:text-xs font-medium text-gray-900 dark:text-gray-300">Include Equity bank withdrawal fees</span>
     </label>
   </div>
   <button type="submit" 
   className="mb-8 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
   onClick={handleSubmit}>Calculate fees</button>
-  <div>
+  <div className="grid md:grid-cols-2 md:gap-6">
     <div className=" w-full mb-6 ">
       <div className="mb-2 text-sm text-gray-500 dark:text-gray-400 ">PayPal Fees:</div>
       <div className=" text-md text-gray-900 dark:text-gray-100 ">{formatCurrency(paypalFees)}</div>
